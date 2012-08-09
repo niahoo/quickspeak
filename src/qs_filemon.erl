@@ -120,7 +120,7 @@ handle_info(timeout, State) ->
         {ok, Bin} = file:read_file(State#state.filename),
         x_clear(),
         ok = io:format("~s~n", [Bin]),
-        ok = io:format("~s",[State#state.nickname ++ ">"])
+        ok = io:format("~s",[State#state.nickname ++ "> "])
       ; _ -> osef
     end,
     {noreply, NewState, ?BASE_TIMEOUT};
@@ -183,8 +183,9 @@ x_ensure_file_exists(Filename) ->
     end.
 
 x_touch(Filename) ->
-    error_logger:info_msg(x_utf8decode(<<"Fichier créé">>)),
-    file:write_file(Filename, <<>>).
+    error_logger:info_msg("Fichier créé, appuyez sur Entrée."),
+    ok = file:write_file(Filename, <<>>)
+    ok.
 
 
 x_utf8decode(Binary) -> 
