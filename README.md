@@ -26,9 +26,9 @@ Lancer la commande suivante:
     
     bin/start Nickname /path/to/filename
 
-Nickname est votre pseudo, il ne doit pas contenir d'espace.
-Le fichier indiqué sera créé s'il n'existe pas.
+* Nickname est votre pseudo, il ne doit pas contenir d'espace.
+* Le fichier indiqué sera créé s'il n'existe pas.
 
 ### Fermeture du client
 
-Taper Ctrl+C deux fois
+Taper Ctrl+C deux fois.
