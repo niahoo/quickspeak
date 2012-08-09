@@ -187,11 +187,6 @@ x_touch(Filename) ->
     ok = file:write_file(Filename, <<>>),
     ok.
 
-
-x_utf8decode(Binary) -> 
-    {ok, List} = asn1rt:utf8_binary_to_list(Binary),
-    List.
-
 x_clear() -> 
     Rows = case io:rows()
         of {ok, Int} -> Int
