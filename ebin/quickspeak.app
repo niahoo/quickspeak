@@ -1,0 +1,9 @@
+{application,quickspeak,
+             [{description,[]},
+              {vsn,"1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {mod,{quickspeak_app,[]}},
+              {env,[]},
+              {modules,[qs_client_cli,qs_filemon,quickspeak,quickspeak_app,
+                        quickspeak_sup]}]}.

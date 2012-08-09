@@ -1,0 +1,16 @@
+PWD=`pwd`
+echo Login: $1
+echo Fichier: $2
+
+if test -z "$1"
+    then echo "Syntaxe bin/start <nickname> <fichier>" && exit
+    else echo ""
+fi
+
+if test -z "$2"
+    then echo "Syntaxe bin/start $1 <fichier>" && exit
+    else echo ""
+fi
+
+# LC_CTYPE=fr_FR.UTF-8 
+erl -nickname $1 -chatfilename $2 -args_file $PWD/priv/startargs 
