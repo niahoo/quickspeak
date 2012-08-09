@@ -14,8 +14,21 @@ Il est possible d'écrire dans ce fichier depuis le même terminal.
 
 ## Installation & Utilisation
 
+### Clonage du dépôt et compilation
+
     git clone https://github.com/niahoo/quickspeak.git
     cd quickspeak
     make
-    bin/start myLogin /path/to/my/file
+    
+### Lancement du client
 
+Lancer la commande suivante:
+    
+    bin/start Nickname /path/to/filename
+
+Nickname est votre pseudo, il ne doit pas contenir d'espace.
+Le fichier indiqué sera créé s'il n'existe pas.
+
+### Fermeture du client
+
+Taper Ctrl+C deux fois
