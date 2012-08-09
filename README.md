@@ -16,6 +16,6 @@ Il est possible d'écrire dans ce fichier depuis le même terminal.
 
     git clone https://github.com/niahoo/quickspeak.git
     cd quickspeak
-    rebar compile
+    make
     bin/start myLogin /path/to/my/file
 
