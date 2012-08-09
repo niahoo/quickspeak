@@ -58,7 +58,7 @@ check() ->
 %% @end
 %%--------------------------------------------------------------------
 init([Filename,Nick]) ->
-    error_logger:info_msg("Loading client on file :~p~n", [Filename]),
+    % error_logger:info_msg("Loading client on file :~p~n", [Filename]),
     {ok, #state{filename=Filename,nickname=Nick}, 0}. 
 
 %%--------------------------------------------------------------------
