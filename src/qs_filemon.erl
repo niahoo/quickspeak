@@ -184,7 +184,7 @@ x_ensure_file_exists(Filename) ->
 
 x_touch(Filename) ->
     error_logger:info_msg("Fichier créé, appuyez sur Entrée."),
-    ok = file:write_file(Filename, <<>>)
+    ok = file:write_file(Filename, <<>>),
     ok.
 
 
