@@ -1,0 +1,2 @@
+
+-record(clstate,{nickname}).

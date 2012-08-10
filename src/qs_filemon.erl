@@ -12,7 +12,7 @@
      terminate/2, code_change/3]).
 
 
--export([write/1,check/0]).
+-export([write/1,check/0,clear/0]).
 
 -define(SERVER, ?MODULE). 
 %% Timeout pour check le fichier de chat, en milisecondes
@@ -41,6 +41,9 @@ write(Data) ->
 
 check() ->
     gen_server:call(?SERVER, check).
+
+clear() ->
+    gen_server:call(?SERVER, clear).
 
 %%%===================================================================
 %%% gen_server callbacks
@@ -75,6 +78,11 @@ init([Filename,Nick]) ->
 %%                                   {stop, Reason, State}
 %% @end
 %%--------------------------------------------------------------------
+
+
+handle_call(clear,  _From,State) ->
+    file:write_file(State#state.filename,<<>>),
+    {reply,ok, State, 0}; %% instant timeout
 
 handle_call(check,  _From,State) ->
     {reply,ok, State, 0}; %% instant timeout
