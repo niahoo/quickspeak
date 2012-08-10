@@ -18,7 +18,7 @@
 %% Timeout pour check le fichier de chat, en milisecondes
 -define(BASE_TIMEOUT, 3000).
 
--record(state, {filename,previous_size=0,nickname}).
+-record(state, {filename,previous_size=-1,nickname}).
 
 %%%===================================================================
 %%% API
