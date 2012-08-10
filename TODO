@@ -1,4 +1,3 @@
 - Changer le nom de qs_filemon, ce n'est plus un simple moniteur, 
   c'est le serveur complet
-- Ajouter un parseur de commandes /nick /quit /clear
 - UFT8 ou pas UFT8 c'est le bordayl.
