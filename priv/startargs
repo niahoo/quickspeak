@@ -1,19 +1,6 @@
-## erlang node
--sname mysname
--setcookie mycookie
-
 -pa ebin
 
-## binaires des dépendances
-## apparemment le wildcard ne fonctionne pas
-#-pa deps/XXX/ebin
-#-pa deps/XXXXX/ebin
-
-
-## démarrage de l'application skyraiders
 -noshell
 -s quickspeak
 -s quickspeak client
-## démarrage du shell après le boot
-# -async_shell_start
 
